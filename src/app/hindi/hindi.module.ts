@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { Routing,RoutingComponents } from './tamil.router';
+import { Routing,RoutingComponents } from './hindi.router';
 
 @NgModule({
 	imports:[
@@ -14,6 +14,6 @@ import { Routing,RoutingComponents } from './tamil.router';
 	providers:[]
 	
 })
-export default class TamilIndustryModule{
+export default class HindiIndustryModule{
 
 }

@@ -10,8 +10,6 @@ import { AppComponent } from './app.component';
 
 import { TeluguIndustryService } from './telugu/telugu.service'
 
-//import { TamilIndustryModule } from './tamil/tamil.module'
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +20,7 @@ import { TeluguIndustryService } from './telugu/telugu.service'
     FormsModule,
     HttpModule,
     RouterModule,
-    Routing,
-   //TamilIndustryModule
+    Routing
   ],
   providers: [
     TeluguIndustryService
