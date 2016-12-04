@@ -10,7 +10,6 @@ import { TeluguIndustryService } from './telugu.service'
 export class TeleuguIndustryHerosListComponent implements OnInit{
 
 	teluguIndustryList:any;
-
 	constructor(private _teluguIndustryService:TeluguIndustryService){
 		this.teluguIndustryData();
 	}
@@ -24,6 +23,10 @@ export class TeleuguIndustryHerosListComponent implements OnInit{
 								   .subscribe(data => {
 								   		this.teluguIndustryList=data[0];
 								   })
+	}
+
+	age(dateString){
+    	return new Date().getFullYear() - new Date(dateString).getFullYear()
 	}
 
 }

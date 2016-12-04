@@ -2,7 +2,7 @@
 	"data": [{
 		"language": "Telugu Film Industry",
 		"herosList": [{
-			"id": 1,
+			"id": 2,
 			"name": "Pawan Kalyan",
 			"linkTo": "PawanKalyan",
 			"avatars": "/assets/images/telugu/pawankalyan.jpg",
@@ -28,7 +28,7 @@
 				"other_data": []
 			}
 		}, {
-			"id": 2,
+			"id": 1,
 			"name": "Mahesh Babu",
 			"linkTo": "MaheshBabu",
 			"avatars": "/assets/images/telugu/Maheshbabu.jpg",

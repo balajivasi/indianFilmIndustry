@@ -4,7 +4,7 @@
 	<!-- Telugu Heros List start -->
 	
 	<div class="col-lg-3 col-md-4 col-sm-6 p-5" *ngFor="let heros of teluguIndustryList.herosList ">
-		<div class="panel panel-success" (click)="onSelectedHero(hero)">
+		<div class="panel panel-success">
 		  <div class="panel-heading">
 		    <h3 class="panel-title"><a href="" [routerLink]="heros.linkTo">{{heros.name}}</a></h3>
 		  </div>
@@ -17,7 +17,10 @@
 		    		</tr>
 		    		<tr>
 		    			<th>Age</th>
-		    			<td>{{heros.requester_details.DOB}}</td>
+		    			<td class="agefont">
+		    				{{heros.requester_details.DOB}} <span *ngIf="heros.requester_details.Died">- {{heros.requester_details.Died}}</span>
+		    				<span *ngIf="!heros.requester_details.Died">({{age(heros.requester_details.DOB)}})</span>
+		    			</td>
 		    		</tr>
 		    	</table>
 		  </div>
