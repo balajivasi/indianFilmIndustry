@@ -6,7 +6,7 @@
 	<div class="col-lg-3 col-md-4 col-sm-6 p-5" *ngFor="let heros of teluguIndustryList.herosList ">
 		<div class="panel panel-success" (click)="onSelectedHero(hero)">
 		  <div class="panel-heading">
-		    <h3 class="panel-title">{{heros.name}}</h3>
+		    <h3 class="panel-title"><a href="" [routerLink]="heros.linkTo">{{heros.name}}</a></h3>
 		  </div>
 		  <div class="panel-body">
 		    	<div class="thumbnail"><img [src]="heros.avatars" /></div>
