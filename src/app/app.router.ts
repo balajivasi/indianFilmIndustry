@@ -9,7 +9,7 @@ const routes:Routes=[
 	{ path:'**', redirectTo:'/',pathMatch:'full'}
 ]
 
-export const Routing =RouterModule.forRoot(routes,{useHash:true})
+export const Routing =RouterModule.forRoot(routes,{useHash:false})
 
 
 export const RoutingComponents=[
