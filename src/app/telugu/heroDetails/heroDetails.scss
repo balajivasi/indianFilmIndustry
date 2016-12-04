@@ -1,0 +1,13 @@
+.thumbnail{
+	float: left;
+	img{
+		max-height: 450px;
+	}
+}
+.badge,.fr{
+	float: right;
+}
+.list-group-item.active.clicked{
+	background:#5cb85c;
+	border-color:#5cb85c;
+}

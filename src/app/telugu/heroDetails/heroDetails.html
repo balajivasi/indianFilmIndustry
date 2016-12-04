@@ -1,1 +1,23 @@
-<h1>heroDetails</h1>
+<article *ngIf="heroDetails">
+	<h1>{{heroDetails.name}} <button type="button" class="btn btn-primary fr" (click)="backtoList()">Back</button></h1>
+	
+	<div class="panel panel-success">
+	  <!-- Default panel contents -->
+		<div class="panel-heading">About {{heroDetails.name}} <span class="badge">Rank {{heroDetails.id}}</span></div>
+		<div class="panel-body">
+			<div class="thumbnail col-lg-3"><img [src]="heroDetails.avatars" [attr.alt]="heroDetails.name" /></div>
+			<div class="col-lg-8 fr">
+				
+			</div>
+		</div>
+
+		<!-- List group -->
+		<ul class="list-group" *ngIf="heroDetails.requester_details.moviesList">
+			<li class="list-group-item active" (click)="onMovieList()" [class.clicked]="showlistOfMovies">List of Movies <span class="badge">{{heroDetails.requester_details.moviesList.length}}</span></li>
+			<span *ngIf="showlistOfMovies">
+				<li class="list-group-item" *ngFor="let Mname of heroDetails.requester_details.moviesList">{{Mname}}</li>
+			</span>
+		</ul>
+	</div>
+
+</article>

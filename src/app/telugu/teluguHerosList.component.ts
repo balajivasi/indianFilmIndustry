@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { TeluguIndustryService } from './telugu.service'
-import { DBUrls } from '../config.dbUrls'
+
 
 @Component({
 	selector:'HerosList',
@@ -20,8 +20,7 @@ export class TeleuguIndustryHerosListComponent implements OnInit{
 	}
 
 	teluguIndustryData(){
-		let url = DBUrls.TeluguDb;
-		this._teluguIndustryService.getDataFromDB(url)
+		this._teluguIndustryService.getDataFromDB()
 								   .subscribe(data => {
 								   		this.teluguIndustryList=data[0];
 								   })
