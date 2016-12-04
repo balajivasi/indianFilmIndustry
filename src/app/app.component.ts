@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Config } from './config.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+  	websiteTitle=Config.WEBSITENAME;
+	webSiteLinks=Config.SiteLinks;
 }

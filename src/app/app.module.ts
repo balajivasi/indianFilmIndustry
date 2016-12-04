@@ -2,19 +2,32 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router'
+
+import { Routing,RoutingComponents } from './app.router'
 
 import { AppComponent } from './app.component';
 
+import { TeluguIndustryService } from './telugu/telugu.service'
+
+//import { TamilIndustryModule } from './tamil/tamil.module'
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RoutingComponents
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule,
+    Routing,
+   //TamilIndustryModule
   ],
-  providers: [],
+  providers: [
+    TeluguIndustryService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
